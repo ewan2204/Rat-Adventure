@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Rat Archaeologist</title>
+		<meta charset=utf-8 />
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="main.css">
+		<script type="module" charset="UTF-8" src="ratArchaeologist.js"></script>	
+		
+	</head>
+	<body>
+		<div id="blocker" >
+			<div id = "title" class = "title">
+				<p style="font-size:36px"> Rat Archaeologist </p>
+			</div>
+
+
+			<div id="main_menu" class = "menu">
+				<p style="font-size:24px"> Main Menu </p>
+				<button  name="change_map_button" 	id=change_map_button class="button button1"><span>Select Map</span></button>
+				<button  name="controls_button" 	id=controls_button class="button button1"><span>Controls</span></button>
+				<button  name="options_button" 		id=options_button class="button button1"><span>Options</span></button>
+			</div>
+
+			<div id="resume_menu" class = "menu">
+				<button name="resume_button" id=resume_button class="button button1" style="display: none"><span>Resume Game</span></button>
+			</div>
+
+			<div id = "pause_menu" class = "menu" style="display: none">
+				<p style="font-size:24px"> Pause Menu </p>
+				<button  name="controls_button" id=controls_button class="button button1"><span>Controls</span></button>
+				<button  name="options_button" id=options_button class="button button1"><span>Options</span></button>
+				<button  name="change_map_button" id=change_map_button class="button button1"><span>Change Map</span></button>
+			</div> 
+
+			<div id = "change_map_menu" class = "menu" style="display: none">
+				<p style="font-size:24px"> Map Selection Screen </p>
+				<select name="level" id="level">
+					<option value="Tutorial">Tutorial</option>
+					<option value="level_one">Level One</option>
+					<option value="level_two">Level Two</option>
+				</select>
+				<p id = "Tutorial_description" style="font-size:24px;display:'';"> The Tutorial is a great place to learn </p>
+				<p id = "level_one_description" style="font-size:24px;display:none;"> Level One is a simple example. </p>
+				<p id = "level_two_description" style="font-size:24px;display:none;" > Level Two is set at night. </p>
+
+				<button name = "play_button" id="play_button" class="button button2"><span>Play</span></button>
+
+
+
+				<br>
+				<br>
+				<button  name="back_button" id=back class="button button1"><span>Return/Go back</span></button>
+			</div> 
+
+			<div id = "options_menu" class = "menu" style="display: none">
+				<p style="font-size:24px"> Options Menu </p>
+
+				<div class="slidecontainer">
+					<input type="checkbox" id="Viewbob" name="Viewbob" checked>
+					<label for="Viewbob"> Viewbob</label><br>
+				</div>
+				
+				<div class="slidecontainer">
+					<input type="checkbox" id="reflections" name="reflections" checked>
+					<label for="reflections"> Enable Real Time Reflections</label><br>
+				</div>
+
+				<div class="slidecontainer">
+					<input type="range" min="0" max="100" value="100" class="slider" id="volume">
+					<p>Volume: <span id="demo"></span></p>
+				</div>
+
+				<button  name="save_settings" id= "save_settings" ><span>Save Settings</span></button>
+
+				<br>
+				<br>
+				<button  name="back_button" id=back class="button button1"><span>Return/Go back</span></button>
+			</div> 
+
+
+			<div id = "end_screen" class = "menu" style="display: none">
+				<p style="font-size:24px" id="victory/loss"> Victory! </p>
+				<button  name="back_button" id= save class="button button1"><span>Main Menu</span></button>
+				<button  name="play_button" id= "play_button" class="button button1"><span>Replay Level</span></button>
+			</div> 
+
+			<div id = "controls_menu" class = "menu" style="display: none">
+				<p style="font-size:24px"> Controls </p>
+				<table>
+					<tr>
+					  <th>Button  </th>
+					  <th>  First Person Action  </th>
+					  <th>  Third Person Action  </th>
+					</tr>
+					<tr>
+					  <td>W</td>
+					  <td>Move Forward</td>
+					  <td>*Nothing*</td>
+					</tr>
+					<tr>
+					  <td>A</td>
+					  <td>Move Left</td>
+					  <td>*Nothing*</td>
+					</tr>
+					<tr>
+						<td>S</td>
+						<td>Move Backwards</td>
+						<td>*Nothing*</td>
+					</tr>
+					<tr>
+						<td>D</td>
+						<td>Move Right</td>
+						<td>*Nothing*</td>
+					</tr>
+					<tr>
+						<td>Space</td>
+						<td>Jump</td>
+						<td>*Nothing*</td>
+					</tr>
+					<tr>
+						<td>Mouse Click</td>
+						<td>Fire Rat</td>
+						<td>Select Tile</td>
+					</tr>
+					<tr>
+						<td>M</td>
+						<td>Change Map View</td>
+						<td>Change Map View</td>
+					</tr>
+					<tr>
+						<td>Escape</td>
+						<td>Pause Game</td>
+						<td>Pause Game	</td>
+					</tr>
+				  </table>
+				<br>
+				<br>
+				<button  name="back_button" id=back class="button button1"><span>Return/Go back</span></button>
+			</div> 
+		</div>
+
+		<div id="popup">
+			<span id="ThingsRemain"></span>
+		</div>
+		
+		<div id="cheese_container">
+			<img src = '../Assets/Cheese/Cheese.png' style="width:150px;height:150px;">
+			<span id="cheese_collected">1 </span>
+            <span id="cheese_remaining">/3</span>
+		</div>
+
+		
+		<div id="container"></div>
+
+
+
+		
+		
+		
+		
+	</body>
+</html>
