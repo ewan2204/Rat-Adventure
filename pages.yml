@@ -1,0 +1,17 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this to your main branch name
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Build and deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: main  # Change this to your main branch name
+        folder: code  # Change this to the path of your custom homepage file
